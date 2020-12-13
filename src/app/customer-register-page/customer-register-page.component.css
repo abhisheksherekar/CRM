@@ -1,0 +1,40 @@
+/* header {
+   background-image: url('../../assets/images/background.jpg');
+   z-index: -1;
+
+} */
+
+.bg-di4 v{
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.img {
+    width: 50vh;
+    height: 50vh;
+    margin-left: 16%;
+    margin-top: 40%;
+}
+
+
+.mobileShow {
+    display: inline;
+}
+
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 580px) {
+    .mobileShow {
+        display: inline;
+    }
+}
+
+.mobileHide {
+    display: inline;
+}
+
+/* Smartphone Portrait and Landscape */
+@media only screen and (min-device-width : 320px) and (max-device-width : 580px) {
+    .mobileHide {
+        display: none;
+    }
+}

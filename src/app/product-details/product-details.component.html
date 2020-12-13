@@ -1,0 +1,42 @@
+<div class="col-md-6 mt-5 rounded col-sm-12 shadow d-flex align-items-center  justify-content-center"
+    style="height: 65vh; background: whitesmoke; ">
+
+    <form #productdetailform="ngForm" (ngSubmit)="onSubmit()" class="was-validated">
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="productdetail.productType" name="productType"
+                placeholder="Enter Your productType" required>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="productdetail.brandName" name="brandName"
+                placeholder="Enter Your brandName" required>
+        </div>
+
+        <div class="form-group">
+            <input type="password" [(ngModel)]="productdetail.modelNo" name="modelNo" class="form-control"
+                placeholder="Enter modelNo " required>
+        </div>
+        <div class="form-group">
+            <input type="date" [(ngModel)]="productdetail.purchaseDate" name="purchaseDate" class="form-control"
+                placeholder="Enter purchaseDate" required>
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="productdetail.pickupCity" name="pickupCity" required class="form-control"
+                placeholder="Enter pickupCity">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="productdetail.productIssue" name="productIssue" required
+                class="form-control" placeholder="Enter productIssue">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="productdetail.pinCode" name="pinCode" required class="form-control"
+                placeholder="Enter pinCode">
+        </div>
+        <div class="form-group">
+            <input type="text" [(ngModel)]="productdetail.mobileNumber" name="mobileNumber" required
+                class="form-control" placeholder="Enter mobileNumber">
+        </div>
+        <div class="form-group">
+            <input type="submit" class="form-control btn btn-info rounded-pill">
+        </div>
+    </form>
+</div>

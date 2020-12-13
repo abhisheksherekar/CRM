@@ -1,0 +1,48 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container-fluid">
+    <div class="row" style="height: 100vh;">
+        <!--NAV-BAR-->
+
+        <!--MIDDLE-COLOUM-->
+        <div class="col-md-6  align-items-center justify-content-center mobileShow">
+            <div class="row d-flex align-items-center  justify-content-center" style="height: 20vh;">
+            </div>
+            <div class="row shadow ml-0 mr-5">
+                <div class="col-4  text-dark d-flex align-items-center justify-content-center"
+                    style="height: 50vh; background-color: #00cba9;">
+                    <b> Welcome to our site <br>
+                        Login Here..!! </b></div>
+                <div class="col-8  d-flex align-items-center  justify-content-center"
+                    style="height: 50vh; background: whitesmoke; ">
+                    <form #loginform="ngForm" (ngSubmit)="customerLogin()">
+                        <div class="ml-5 form-group display-3">
+                            <i class="fas fa-user-friends"></i> </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Enter Email-id" required
+                                [(ngModel)]="customer.customerEmail" name="customerEmail">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Enter Password" required
+                                [(ngModel)]="customer.customerPassword" name="customerPassword">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="rounded-pill form-control btn btn-info">
+                        </div>
+                        <div class="form-group text-center">
+                            <a routerLink="/customer/register"> Dont't have account ?
+                                <br>
+                            </a>
+                            <a href="fp.html"> Forgot Password ? </a> </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-3 bg-inf1o mobileHide">
+            <img src="assets/images/1.svg" alt="png" class="img">
+        </div>
+    </div>
+
+</div>

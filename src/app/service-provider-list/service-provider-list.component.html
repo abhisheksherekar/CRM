@@ -1,0 +1,15 @@
+<div class="container-fluid">
+    <table class="table table-light">
+        <tbody>
+
+            <tr *ngFor="let user of providerlist">
+                <td>{{user.spName}}</td>
+                <td>{{user.spRegnumber}}</td>
+                <td>{{user.spShopname}}</td>
+                <td>{{user.spLandmark}}</td>
+                <td>{{user.spPincode}}</td>
+                <td> <button (click)="onSelect(user.spID)" class='btn btn-primary'>Select </button> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

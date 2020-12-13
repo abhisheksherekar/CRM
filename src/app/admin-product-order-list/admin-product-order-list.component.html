@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <table class="table table-light">
+        <tbody>
+
+            <tr *ngFor="let productList of order">
+                <td>{{productList.productType}}</td>
+                <td>{{productList.brandName}}</td>
+                <td>{{productList.purchaseDate}}</td>
+                <td>{{productList.modelNo}}</td>
+                <td>{{productList.productIssue}}</td>
+                <td>{{productList.pickupCity}}</td>
+                <td>{{productList.pinCode}}</td>
+                <td>{{productList.mobileNumber}}</td>
+                <td>{{productList.orderStatus}}</td>
+                <td>{{productList.spId}}</td>
+                <td> <button (click)="onApprove(productList.productId)" class='btn btn-success'> Approve </button> </td>
+                <td> <button (click)="onReject(productList.productId)" class='btn btn-danger'> Reject </button> </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

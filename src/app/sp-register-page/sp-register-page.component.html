@@ -1,0 +1,76 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container-fluid">
+    <div class="row p-0" style="height: 100vh;">
+        <!--MIDDLE-COLOUM-->
+        <div class="col-md-7 m-0 p-0 align-items-center justify-content-center">
+            <div class="row d-flex align-items-center  justify-content-center" style="height: 20vh;">
+            </div>
+            <div class="row  " style="margin-left: 5vh;">
+                <div class="col-md-4 col-sm-12 rounded shadow text-dark d-flex align-items-center display-4 justify-content-center"
+                    style="height: 65vh; background-color: #00cba9;">
+                    SP Sign-up Here..!!
+                </div>
+                <div class="col-md-6 rounded col-sm-12 shadow d-flex align-items-center  justify-content-center"
+                    style="height: 65vh; background: whitesmoke; ">
+
+                    <form #registerform="ngForm" (ngSubmit)="onSubmit()" class="was-validated">
+                        <div class="form-group">
+                            <input type="text" class="form-control" [(ngModel)]="provider.spName" name="spName"
+                                placeholder="Enter SP Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" [(ngModel)]="provider.spShopname" name="spShopname"
+                                placeholder="Enter Shop Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" [(ngModel)]="provider.spEmail" name="spEmail" class="form-control"
+                                placeholder="Enter EMAIL " required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="provider.spRegnumber" name="spRegnumber"
+                                class="form-control" placeholder="Enter REG NO " required minlength="6" maxlength="18">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="provider.spGSTno" name="spGSTno" required
+                                class="form-control" placeholder="Enter mobile no">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="provider.spLandmark" name="spLandmark" required
+                                class="form-control" placeholder="Enter sp Landmark no">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" [(ngModel)]="provider.spCity" name="spCity"
+                                placeholder="Enter sp City" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" [(ngModel)]="provider.spPincode" name="spPincode"
+                                placeholder="Enter  PINCODE" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="provider.spMobilenumber" name="spMobilenumber"
+                                class="form-control" placeholder="Enter Mobile Number" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" [(ngModel)]="provider.spPasssword" name="spPasssword" required
+                                class="form-control" placeholder="Enter password no">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="form-control btn btn-info rounded-pill">
+                        </div>
+                        <div class="form-group text-center">
+                            <a routerLink="/provider/login"> Already have account ? </a> </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 bg-inf1o mobileHide">
+            <img src="assets/images/2.svg" alt="png" class="img">
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+</div>

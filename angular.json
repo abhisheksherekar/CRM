@@ -62,7 +62,8 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "CRM-AngularApp:build"
+            "browserTarget": "CRM-AngularApp:build",
+            "proxyConfig": "proxy.conf.json"
           },
           "configurations": {
             "production": {
@@ -88,6 +89,7 @@
               "src/assets"
             ],
             "styles": [
+              "../node_modules/font-awesome/css/font-awesome.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CRM-AngularApp"
+    }
+  },
+  "defaultProject": "CRM-AngularApp",
+  "cli": {
+    "analytics": "d362c486-427f-4610-81d9-605d8b4ceb35"
+  }
 }

@@ -1,0 +1,62 @@
+<app-nav-bar></app-nav-bar>
+
+<div class="container-fluid">
+    <!-- <img src="assets/images/background.jpg" class="bgimg" alt="images"> -->
+    <!-- <div class="bg-div" style="background-image: url(assets/images/background.jpg);">
+    </div> -->
+    <!-- <div [ngStyle]="{backgroundImage:'url(assets/images/background.png)'}">
+    </div> -->
+    <div class="row p-0" style="height: 100vh;">
+        <!--MIDDLE-COLOUM-->
+        <div class="col-md-7 m-0 p-0 align-items-center justify-content-center mobileShow ">
+            <div class="row d-flex align-items-center  justify-content-center" style="height: 20vh;">
+            </div>
+            <div class="row  " style="margin-left: 5vh;">
+                <div class="col-md-4 col-sm-12 rounded shadow text-dark d-flex align-items-center display-4 justify-content-center"
+                    style="height: 65vh; background-color: #00cba9;">
+                    Sign-up Here..!!
+                </div>
+                <div class="col-md-6 rounded col-sm-12 shadow d-flex align-items-center  justify-content-center"
+                    style="height: 65vh; background: whitesmoke; ">
+
+                    <form #registerform="ngForm" (ngSubmit)="customerRegister()" class="was-validated">
+                        <div class="form-group">
+                            <input type="text" class="form-control" [(ngModel)]="customer.customerName"
+                                name="customerName" placeholder="Enter Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" [(ngModel)]="customer.customerEmail"
+                                name="customerEmail" placeholder="Enter Your Email-id" required>
+                            <!-- pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" -->
+                            <small class="text-danger">{{errMsg}}</small>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="password" [(ngModel)]="customer.customerPassword" name="customerPassword"
+                                class="form-control" placeholder="Enter Mobile Number" required>
+                        </div>
+                        <!-- <div class="form-group">
+                            <input type="password" [(ngModel)]="customer.customerEmail" class="form-control" placeholder="Enter Password" required
+                                minlength="6" maxlength="18">
+                        </div> -->
+                        <div class="form-group">
+                            <input type="text" [(ngModel)]="customer.customerMobile" name="customerMobile" required
+                                class="form-control" placeholder="Enter mobile no">
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" class="form-control btn btn-info rounded-pill">
+                        </div>
+                        <div class="form-group text-center">
+                            <a routerLink="/sp_login"> Already have account ? </a> </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-3 bg-inf1o mobileHide">
+            <img src="assets/images/2.svg" alt="png" class="img">
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+</div>
