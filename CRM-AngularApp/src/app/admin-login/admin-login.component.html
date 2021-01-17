@@ -1,0 +1,52 @@
+<app-nav-bar></app-nav-bar>
+<br><br><br>
+<br>
+<section>
+    <div class="container">
+        <div class="user signinBx">
+
+            <div class="imgBx"><img
+                    src="https://www.eballot.com/hs-fs/hubfs/EBA-04-Home-For-you-and-your-voters.jpg?width=1300&height=720&name=EBA-04-Home-For-you-and-your-voters.jpg"
+                    alt="" /></div>
+            <div class="formBx">
+
+                <form #loginform="ngForm" (ngSubmit)="adminLogin()">
+                    <h2>Sign In</h2>
+                    <div class="alert alert-danger" *ngIf="errMsg">
+                        <strong>Warning !</strong> Incorrect Email or password.
+                    </div>
+                    <input type="email" [(ngModel)]="admin.adminEmail" name="adminEmail" placeholder="Enter Email" />
+                    <input type="password" [(ngModel)]="admin.adminPassword" name="adminPassword"
+                        placeholder="Password" />
+                    <input type="submit" name="" value="Login" />
+                    <p class="signup">
+                        Don't have an account ?
+                        <a routerLink="/admin/register">Sign Up.</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+        <div class="user signupBx">
+            <div class="formBx">
+                <form action="" onsubmit="return false;">
+                    <h2>Create an account</h2>
+                    <input type="text" name="" placeholder="Username" />
+                    <input type="email" name="" placeholder="Email Address" />
+                    <input type="password" name="" placeholder="Create Password" />
+                    <input type="password" name="" placeholder="Confirm Password" />
+                    <input type="submit" name="" value="Sign Up" />
+                    <p class="signup">
+                        Already have an account ?
+                        <a>Sign in.</a>
+                    </p>
+                </form>
+            </div>
+            <div class="imgBx"><img
+                    src="https://www.eballot.com/hs-fs/hubfs/EBA-03-Home-Online-Election-Software-Security.jpg?width=1300&height=720&name=EBA-03-Home-Online-Election-Software-Security.jpg"
+                    alt="" /></div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<app-footer></app-footer>

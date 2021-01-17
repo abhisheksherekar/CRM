@@ -1,0 +1,74 @@
+<nav class="navbar bg-secondary fixed-top mb-4 navbar-expand-lg ">
+    <a class="navbar-brand" href="#">
+        <!-- <b class="display-4"> CRM </b> -->
+        <div> <img class="" style="margin-top: -40%;" src="assets/images/crm.png" alt="Book" /> </div>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-align-right text-light"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <div class="mr-auto"></div>
+        <ul class="navbar-nav ">
+            <li class="nav-item active" style="font-size: 20px;">
+                <a class="nav-link text-light" href="#">
+                    <button class="btn btn-lg btn-primary">Home</button>
+                </a>
+            </li>
+
+            <li class="nav-item" style="font-size: 20px;">
+                <a [routerLink]="['/about-us']" class="ml-2 nav-link text-light">
+                    <button class="btn btn-lg btn-primary">About Us</button></a>
+            </li>
+            <li class="nav-item" style="font-size: 20px;">
+                <a [routerLink]="['/contact-us']" class="ml-2 nav-link text-light">
+                    <button class="btn btn-lg btn-primary">Contact us</button></a>
+            </li>
+
+            <li class="nav-item" style="font-size: 20px;">
+                <a class="nav-link ml-2 text-light">
+                    <button [disabled]="checkLogin" (click)="logout()"
+                        class="btn btn-lg btn-danger">Log-out</button></a>
+            </li>
+
+        </ul>
+    </div>
+</nav>
+<div class="row " style="background-color: whitesmoke;">
+    <div class=" col-md-6">
+        <div class="col-12 container-fluid m-3" style="display: flex; justify-content: center;align-items: center;">
+            <h1 style="font-size: 4em;">Welcome {{x}}</h1>
+        </div>
+        <div class="container-fluid">
+            <div class="row g-3">
+                <div class="col-12" style="margin-top: 13%; text-align: center;">
+                    <h1>Want to see the List and Status of Service Provider ?</h1>
+                </div>
+                <div class="col-12" style="display: flex; align-items: center;justify-content: center;">
+                    <button routerLink="/admin-service-provider-list" type="submit"
+                        class="btn btn-lg btn-secondary ">Click Here</button>
+                </div>
+                <div class="col-12" style="margin-top: 13%; text-align: center;">
+                    <h1>Want to check the Order's List ?</h1>
+                </div>
+                <div class="col-12" style="display: flex; align-items: center;justify-content: center;">
+                    <button routerLink="/admin-product-order-list" type="submit" class="btn btn-lg btn-secondary">Click
+                        Here</button>
+                </div>
+                <div class="col-12 btn-lg" style="margin-top: 13%; text-align: center;">
+                    <h1>Want to Add Another Admin ?</h1>
+                </div>
+                <div class="col-12" style="display: flex; align-items: center;justify-content: center;">
+                    <button routerLink="/admin-register" type="submit" class="btn  btn-lg btn-secondary">Click
+                        Here</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <img src="assets/images/22.jpg" class="img-fluid" alt="image">
+    </div>
+</div>
+<br><br>
+<app-footer></app-footer>
