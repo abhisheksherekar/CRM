@@ -1,0 +1,49 @@
+<app-nav-bar></app-nav-bar>
+<br><br><br>
+<br>
+<section>
+    <div class="container">
+        <div class="user signinBx">
+
+            <div class="imgBx"><img src="assets/images/1.svg" alt="" /></div>
+            <div class="formBx">
+
+                <form #loginform="ngForm">
+                    <h2>FORGOT PASSWORD ?</h2>
+                    <!-- <div class="alert alert-danger" *ngIf="errMsg">
+                        <strong>Warning !</strong> Incorrect Email or password.
+                    </div> -->
+                    <input type="email" name="adminEmail" placeholder="Enter Email" />
+
+                    <input type="submit" name="" value="Login" />
+                    <p class="signup">
+                        Want to go Login page ?
+                        <a routerLink="/customer/login">Log in .</a>
+                    </p>
+                    <!-- [(ngModel)]=""
+                    [(ngModel)]="" -->
+                </form>
+            </div>
+        </div>
+        <div class="user signupBx">
+            <div class="formBx">
+                <form action="" onsubmit="return false;">
+                    <h2>Create an account</h2>
+                    <input type="text" name="" placeholder="Username" />
+                    <input type="email" name="" placeholder="Email Address" />
+                    <input type="password" name="" placeholder="Create Password" />
+                    <input type="password" name="" placeholder="Confirm Password" />
+                    <input type="submit" name="" value="Sign Up" />
+                    <p class="signup">
+                        Already have an account ?
+                        <a>Sign in.</a>
+                    </p>
+                </form>
+            </div>
+            <div class="imgBx"><img src="assets/images/crm.png" alt="" /></div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+<app-footer></app-footer>

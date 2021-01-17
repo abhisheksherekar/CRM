@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <div class="row mt-1" style="height: 100vh">
+        <!-- left-block -->
+        <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+            <img src="assets/images/88.jpg">
+        </div>
+        <!-- right-block -->
+        <div class="col-md-6 border border-dark d-flex justify-content-center align-items-center">
+            <div>
+                <form #loginform="ngForm" (ngSubmit)="onSubmit()">
+                    <div class="row">
+                        <div>
+                            <h2 class="display-4">Provider Login </h2>
+                        </div>
+                        <div class="alert alert-danger" *ngIf="errMsg">
+                            <strong>Warning !</strong> Incorrect Email or password.
+                        </div>
+                        <div class="col-md-6">
+
+                            <div class="form-group">
+                                <label for="">Email Id<span>*</span></label>
+                                <input [(ngModel)]="provider.spEmail" name="spEmail" type="text" class="form-control"
+                                    minlength="3" maxlength="30" #userEmail="ngModel"
+                                    pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)" required
+                                    [class.is-invalid]="userEmail.invalid && userEmail.touched" id="emailId">
+
+                                <div *ngIf="userEmail.errors && (userEmail.invalid && userEmail.touched)">
+                                    <div class="text-danger" *ngIf="userEmail.errors.required">Please Enter Your Email
+                                    </div>
+                                    <div class="text-danger" *ngIf="userEmail.errors.pattern">Please use alphabet only.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="">Password<span>*</span></label>
+                                <input [(ngModel)]="provider.spPasssword" name="spPasssword" type="password"
+                                    minlength="3" maxlength="12" #passWord="ngModel" pattern="[a-zA-Z0-9]*[@#]+"
+                                    required [class.is-invalid]="passWord.invalid && passWord.touched"
+                                    class="form-control" id="password">
+                                <div *ngIf="passWord.errors && (passWord.invalid && passWord.touched)">
+                                    <div class="text-danger" *ngIf="passWord.errors.required">Please Password
+                                    </div>
+                                    <div class="text-danger" *ngIf="passWord.errors.pattern">Password must contain 1
+                                        special character.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-dark " type="submit">Login</button>
+                    <br> <br>
+                    <div><a href="">Forgot Password ? </a></div>
+                    <div><a routerLink="/sp_register">Dont't have account ?</a></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
